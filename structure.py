@@ -56,7 +56,7 @@ print("Sending data to Gemini (New SDK)...")
 # 5. Generate (New Syntax)
 try:
     response = client.models.generate_content(
-        model="gemini-1.5-flash-001",  # Using the newer, faster model
+        model="gemini-2.0-flash-lite-preview-02-05",  # Using the newer, faster model
         contents=prompt,
         config=types.GenerateContentConfig(
             response_mime_type="application/json" # Forces JSON output natively
