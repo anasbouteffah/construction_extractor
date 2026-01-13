@@ -1,0 +1,135 @@
+{
+    "project_info": {
+        "name": "SAN MARTIN",
+        "address": "73 SOUTH ST, SAN MARTIN, CA 95046",
+        "date": null
+    },
+    "drawings_list": [
+        {
+            "sheet_number": "T-1",
+            "description": "TITLE SHEET",
+            "revision": "5"
+        },
+        {
+            "sheet_number": "N-1",
+            "description": "GENERAL CONSTRUCTION NOTES",
+            "revision": "5"
+        },
+        {
+            "sheet_number": "N-2",
+            "description": "GENERAL CONSTRUCTION NOTES",
+            "revision": "5"
+        },
+        {
+            "sheet_number": "C-1.1",
+            "description": "EXISTING OVERALL SITE PLAN",
+            "revision": "5"
+        },
+        {
+            "sheet_number": "C-1.2",
+            "description": "EXISTING INTERMEDIATE SITE PLAN",
+            "revision": "5"
+        },
+        {
+            "sheet_number": "C-2.1",
+            "description": "PROPOSED INTERMEDIATE SITE PLAN",
+            "revision": "5"
+        },
+        {
+            "sheet_number": "C-2.2",
+            "description": "PROPOSED DETAILED SITE PLAN",
+            "revision": "5"
+        },
+        {
+            "sheet_number": "C-3",
+            "description": "COMPOUND DETAILS",
+            "revision": "5"
+        },
+        {
+            "sheet_number": "C-4",
+            "description": "HATCH PLATE CONNECTIONS",
+            "revision": "5"
+        },
+        {
+            "sheet_number": "C-5",
+            "description": "PROPOSED LANDSCAPE PLAN",
+            "revision": "5"
+        },
+        {
+            "sheet_number": "C-6",
+            "description": "LANDSCAPE NOTES & DETAILS",
+            "revision": "5"
+        },
+        {
+            "sheet_number": "F-1",
+            "description": "FOUNDATION NOTES",
+            "revision": "5"
+        },
+        {
+            "sheet_number": "F-2",
+            "description": "INSPECTION CHECKLIST",
+            "revision": "5"
+        },
+        {
+            "sheet_number": "F-3",
+            "description": "FOUNDATION DETAILS",
+            "revision": "5"
+        },
+        {
+            "sheet_number": "F-4",
+            "description": "FOUNDATION DETAILS",
+            "revision": "5"
+        },
+        {
+            "sheet_number": "E-1",
+            "description": "DETAILED UTILITY PLAN",
+            "revision": "5"
+        },
+        {
+            "sheet_number": "E-2.1",
+            "description": "EXISTING ONE-LINE DIAGRAM",
+            "revision": "5"
+        },
+        {
+            "sheet_number": "E-2.2",
+            "description": "EXISTING PANEL SCHEDULES",
+            "revision": "5"
+        },
+        {
+            "sheet_number": "E-3.1",
+            "description": "PROPOSED ONE-LINE DIAGRAM",
+            "revision": "5"
+        },
+        {
+            "sheet_number": "E-3.2",
+            "description": "PROPOSED PANEL SCHEDULES",
+            "revision": "5"
+        },
+        {
+            "sheet_number": "E-4",
+            "description": "ELECTRICAL DETAILS",
+            "revision": "5"
+        },
+        {
+            "sheet_number": "E-5",
+            "description": "ELECTRICAL NOTES",
+            "revision": "5"
+        },
+        {
+            "sheet_number": "G-1",
+            "description": "GROUNDING PLAN",
+            "revision": "5"
+        },
+        {
+            "sheet_number": "G-2",
+            "description": "GROUNDING NOTES AND DETAILS",
+            "revision": "5"
+        },
+        {
+            "sheet_number": "REF-1",
+            "description": "SHELTER MANUFACTURER DRAWINGS (REFERENCE ONLY)",
+            "revision": "-"
+        }
+    ],
+    "summary": "This document is a construction plan for the SAN MARTIN project, located at 73 SOUTH ST, SAN MARTIN, CA 95046, and includes project information and a list of drawings with their descriptions and revisions."
+}

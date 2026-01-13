@@ -1,16 +1,22 @@
 import os
 import json
-from google import genai
-from google.genai import types
+from openai import OpenAI
 from dotenv import load_dotenv
 
 # 1. Setup
 load_dotenv()
-api_key = os.getenv("GOOGLE_API_KEY")
+api_key = os.getenv("OPENROUTER_API_KEY")
 
-# 2. Prepare the Client (New Syntax)
-# The new SDK handles the connection differently
-client = genai.Client(api_key=api_key)
+if not api_key:
+    print("Error: OPENROUTER_API_KEY not found in .env")
+    exit()
+
+# 2. Connect to OpenRouter
+# OpenRouter uses the standard OpenAI client but with a different URL
+client = OpenAI(
+    base_url="https://openrouter.ai/api/v1",
+    api_key=api_key,
+)
 
 # 3. Read the Markdown file
 try:
@@ -51,33 +57,38 @@ REQUIRED JSON STRUCTURE:
 }}
 """
 
-print("Sending data to Gemini (New SDK)...")
+print("Sending data to OpenRouter (Free Model)...")
 
-# 5. Generate (New Syntax)
+# 5. Generate
 try:
-    response = client.models.generate_content(
-        model="gemini-2.0-flash-lite-preview-02-05",  # Using the newer, faster model
-        contents=prompt,
-        config=types.GenerateContentConfig(
-            response_mime_type="application/json" # Forces JSON output natively
-        )
+    completion = client.chat.completions.create(
+        # We use the FREE version of Gemini via OpenRouter
+        model="google/gemini-2.0-flash-exp:free",
+        messages=[
+            {
+                "role": "user",
+                "content": prompt
+            }
+        ]
     )
 
-    # 6. Save Output
-    # The new SDK returns data in response.text
-    cleaned_text = response.text
+    # 6. Process Output
+    response_text = completion.choices[0].message.content
     
-    # Parse and Save
+    # Clean up potential markdown formatting (```json ... ```)
+    cleaned_text = response_text.replace("```json", "").replace("```", "").strip()
+    
+    # Parse JSON
     data = json.loads(cleaned_text)
     
+    # Save to file
     with open("final_data.json", "w", encoding="utf-8") as f:
         json.dump(data, f, indent=4)
         
     print("\nSUCCESS! Data extracted to 'final_data.json'")
     print("-" * 30)
     print("PREVIEW:")
-    # Print first 2 items to verify
-    print(json.dumps(data.get("drawings_list", [])[:2], indent=2))
+    print(json.dumps(data.get("drawings_list", [])[:3], indent=2))
 
 except Exception as e:
     print(f"\nERROR: {e}")
